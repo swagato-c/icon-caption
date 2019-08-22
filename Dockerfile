@@ -9,7 +9,7 @@ RUN pip install -r requirements.txt
 
 COPY app app/
 
-EXPOSE 8000
+EXPOSE 8080
 
 RUN python app/server.py
 
