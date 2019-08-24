@@ -9,16 +9,23 @@ the project.
 
 To test it locally,
 ```
-$ docker build -t icon-caption . && docker run --rm -it -p 8000:8000 icon-caption
+$ docker build -t icon-caption . && docker run --rm -it -p 80:8080 icon-caption
 ```
 You can also use `virtualenv` for which activate a `python3` environment on 
-the top directory and run the following to see the site live in http://0.0.0.0:8000.
+the top directory and run the following to see the site live in http://localhost.
 ```
 [icon-caption]$ python app/server.py serve
 ```
 
+# Running on AWS
+
+As of now the site runs on AWS EC2 t3.small instance with 2vCPUs, 2GiB RAM and 16
+GiB storage. It will be be optimized soon with a less resource hungry instance.
+It is live [here](http://52.207.224.144/).
+
 # Acknowledgements
 
 The boilerplate is courtsey of [fastai render template](https://github.com/render-examples/fastai-v3);
-and special thanks to friends Tanumoy Nandi, Murtaza Sadriwala and Avantika 
-Mishra who helped me in debuuging the web clients.
+and special thanks to friends Tanumoy Nandi, Murtaza Sadriwala, Avantika 
+Mishra and Rwik Dutta who helped me in debugging the web client and deploy
+in AWS.
